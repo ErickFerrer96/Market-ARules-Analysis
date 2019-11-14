@@ -64,5 +64,5 @@ inspect(sort(reglas, by = 'lift')[1:20])
 
 |Index| Description | Image |
 | ---| --- | --- |
-| 1 | Parametros que toma en cuenta el clustering | <img src="Imagenes/Indicadores.png" width="500" heigth="300"> |
-| 2 | Resultado de 6 clusters | <img src="Imagenes/Mapa.png" width="300" heigth="600"> |
+| 1 | Rules of the apriori algorithm | <img src="SS/Rules.png" width="500" heigth="300"> |
+
