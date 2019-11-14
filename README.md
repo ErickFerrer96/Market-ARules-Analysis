@@ -9,6 +9,8 @@ Install RStudio
 
 In MarketRules.R
 
+In this part of the code i just import the dataset with read.cvs, and obtein a object of transaction.
+
 ```R
 
 #Proyecto Reglas de asociasion 
@@ -24,13 +26,25 @@ dataset = read.csv('/Users/Erick/Desktop/9no/ProyectoDM/ReporteReglas/Base/Marke
 dataset = read.transactions('/Users/Erick/Desktop/9no/ProyectoDM/ReporteReglas/Base/Market_Basket_Optimisation.csv',sep = ',',rm.duplicates = TRUE)
 
 summary(dataset)
+```
+Then for a plot of the ten 10 most purchased items
 
+```R
 itemFrequencyPlot(dataset, topN = 10)
+```
+
+For the training i create the variable "reglas" witch contain the rules based on the apriori algorithm, with a minium of 0.004 in support and 0.2 in confidence. 
+
+```R
 
 #Entrenando el algorimo Apriori para la base
 
 reglas = apriori(data=dataset,parameter = list(support = 0.004,confidence = 0.2))
 
+```
+Finally for analyze the rules we put our variable reglas in a inspect so we can see it in the console.
+
+```
 #Visualizar las reglas
 
 inspect(sort(reglas, by = 'lift')[1:20])
