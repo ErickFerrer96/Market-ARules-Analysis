@@ -35,9 +35,10 @@ reglas = apriori(data=dataset,parameter = list(support = 0.004,confidence = 0.2)
 
 inspect(sort(reglas, by = 'lift')[1:20])
 
+```
 
-
-## Autores 
+## Authors
+ 
 
 * **Ferrer Garcia Erick** - [ErickFerrer96](https://github.com/ErickFerrer96)
 
